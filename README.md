@@ -13,3 +13,5 @@ Edit `index.html` for biography, project descriptions, and links. Edit `styles.c
 ## Publish
 
 Commit and push to the branch configured in the repository's GitHub Pages settings. Serve from the repository root. This project requires no build command.
+
+After changing `styles.css`, update its `?v=` value in `index.html` (for example, to the first 12 characters of the stylesheet SHA-256 hash). This makes browsers request the updated CSS after deployment.
