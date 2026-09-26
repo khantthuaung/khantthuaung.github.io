@@ -5,3 +5,37 @@
 
 /* Applied machine learning case studies */
 .hero-bottom{gap:40px;align-items:center}.hero-bottom>p{max-width:650px;font-size:clamp(18px,2vw,25px);line-height:1.6}.round-link{flex-shrink:0}.case-study{border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:48px}.case-study .project{border:0;margin:0;padding-bottom:24px;align-items:start;gap:6%;grid-template-columns:1.1fr 1fr}.case-study .project-info{padding:18px 0}.project-info p{max-width:none}.project-info h3{font-size:clamp(26px,2.8vw,38px)}.evidence-panel{margin:0;padding:30px;min-width:0}.panel-label{font-size:12px;letter-spacing:1.3px}.evidence-panel h4{font:500 clamp(24px,2.6vw,36px)/1.2 'Manrope',sans-serif;letter-spacing:-1px;margin:25px 0}.pipeline{padding:0;list-style:none;margin:32px 0}.pipeline li{display:flex;gap:16px;padding:17px 0;border-top:1px solid #0003}.pipeline li>span{font-size:12px;padding-top:3px;opacity:.7}.pipeline strong{font-size:16px;font-weight:600;display:block}.pipeline small{display:block;font-size:14px;margin-top:5px;line-height:1.5}.panel-caption{font-size:12px;line-height:1.65;margin-top:20px}.panel-caption a{text-decoration:underline;text-underline-offset:3px;display:inline-block}.chart-subtitle{font-size:14px;line-height:1.5}.bar-chart{margin:25px 0}.bar-row{display:grid;grid-template-columns:1fr auto;gap:7px;font-size:14px;margin-bottom:18px}.bar-row strong{font-weight:500;font-variant-numeric:tabular-nums}.bar-track{grid-column:1/-1;background:#1c373512;height:10px}.bar-track i{display:block;height:100%;background:#1c5750}.project-links{display:flex;flex-wrap:wrap;gap:0 20px}.project-cta{display:inline-block;font-size:14px}.tags span{font-size:13px}.case-details summary{cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:14px;padding:14px 0;list-style:none}.case-details summary::-webkit-details-marker{display:none}.case-details summary>span{font-size:24px;color:var(--accent)}.case-details[open] summary>span{transform:rotate(45deg)}summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;padding:20px 0}.case-grid h4{margin:0 0 8px;font-size:16px;font-weight:500}.case-grid p{font-size:15px;line-height:1.75;color:var(--muted)}.other-work{padding-top:35px}.other-work .section-heading h2{font-size:28px}.other-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.other-grid>a{padding:24px 0;border-top:1px solid var(--line)}.other-grid h3{font-size:22px;font-weight:500;margin:12px 0;display:flex;justify-content:space-between}.other-grid p{font-size:15px;color:var(--muted)}.other-grid a:hover h3{color:var(--accent)}.evidence-panel a:focus-visible{outline-color:currentColor}@media(max-width:900px){.hero-bottom{align-items:flex-start;flex-direction:column;gap:24px}.case-study .project{grid-template-columns:1fr;gap:12px}.evidence-panel{padding:28px}.case-study .project-info{padding:15px 0}.project-info h3{font-size:30px}.evidence-panel h4{font-size:30px}}@media(max-width:550px){.eyebrow{font-size:10px;letter-spacing:.8px}.section-heading h2{font-size:26px}.case-grid,.other-grid{grid-template-columns:1fr;gap:22px}.evidence-panel{padding:24px}.case-study{margin-bottom:36px}.hero-bottom>p{font-size:18px}.hero-meta{gap:12px}.tags span{font-size:12px}}
+
+/* Personal portrait, kept secondary to the project work. */
+.about-portrait{display:block;width:min(100%,260px);height:auto;aspect-ratio:1;object-fit:cover;border-radius:12px;margin-top:30px;border:1px solid var(--line)}
+@media(max-width:700px){.about-portrait{width:210px;max-width:100%;margin-top:24px}}
+
+/* Portrait-led introduction. */
+.hero{padding-top:64px}
+.hero-layout{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:center;gap:7%}
+.hero-portrait{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center;border-radius:14px}
+.hero-copy{min-width:0}
+.hero-copy h1{font-size:clamp(58px,6.6vw,94px);letter-spacing:-.065em;margin:26px 0;line-height:1.06}
+.hero-copy .eyebrow{font-size:11px;letter-spacing:1px;line-height:1.7}
+.hero-copy .hero-bottom{flex-direction:column;align-items:flex-start;gap:25px}
+.hero-copy .hero-bottom>p{font-size:clamp(17px,1.65vw,22px);line-height:1.65}
+.hero-meta{margin-top:50px}
+@media(max-width:700px){
+ .hero{padding-top:32px}
+ .hero-layout{grid-template-columns:1fr;gap:30px}
+ .hero-portrait{width:min(100%,340px);aspect-ratio:1;justify-self:center}
+ .hero-copy h1{font-size:clamp(62px,13vw,90px);margin:21px 0}
+ .hero-copy .hero-bottom>p{font-size:18px}
+ .hero-copy .eyebrow{font-size:10px}
+ .hero-meta{margin-top:36px}
+}
+
+/* Introduction on the left, portrait on the right. */
+.hero-layout{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}
+.hero-copy{grid-column:1;grid-row:1}
+.hero-portrait{grid-column:2;grid-row:1}
+@media(max-width:700px){
+ .hero-layout{grid-template-columns:1fr}
+ .hero-copy{grid-column:1;grid-row:1}
+ .hero-portrait{grid-column:1;grid-row:2}
+}

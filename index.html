@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Khant Thu Aung — data science portfolio, featuring code vulnerability detection, traffic prediction, and weather forecasting.">
+  <meta name="description" content="Khant Thu Aung — data science portfolio, featuring code vulnerability detection and traffic prediction with route guidance.">
   <meta name="theme-color" content="#161815">
   <title>Khant Thu Aung — AI, ML & Data Science</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23d6f584'/%3E%3Ctext x='8' y='29' font-family='Arial' font-size='27' font-weight='bold' fill='%23161815'%3Ek%3C/text%3E%3C/svg%3E">
@@ -19,13 +19,18 @@
     </header>
     <main id="main">
       <section class="hero" aria-labelledby="intro-title">
+        <div class="hero-layout">
+          <img class="hero-portrait" src="assets/khant-thu-aung.jpg" alt="Portrait of Khant Thu Aung" width="1254" height="1254" fetchpriority="high" decoding="async">
+          <div class="hero-copy">
         <div class="eyebrow"><span class="tiny-cross" aria-hidden="true">✳</span> AI / MACHINE LEARNING / DATA SCIENCE</div>
         <h1 id="intro-title">Khant<br>Thu Aung<span class="period">.</span></h1>
         <div class="hero-bottom"><p>I build applications that turn data into predictions—from detecting vulnerable code to forecasting traffic and finding better routes.</p><a class="round-link" href="#work"><span>Explore my work</span><span class="circle" aria-hidden="true">↓</span></a></div>
+          </div>
+        </div>
         <div class="hero-meta"><span>BASED IN KUALA LUMPUR, MY</span><span>PORTFOLIO / <span id="year">2026</span></span></div>
       </section>
       <section id="work" class="work" aria-labelledby="work-title">
-        <div class="section-heading"><h2 id="work-title">Applied ML, in practice<span class="sup">(03)</span></h2><span class="small-label">SELECTED PROJECTS</span></div>
+        <div class="section-heading"><h2 id="work-title">Applied ML, in practice<span class="sup">(02)</span></h2><span class="small-label">SELECTED PROJECTS</span></div>
         <article class="case-study" aria-labelledby="security-title">
           <div class="project">
             <div class="evidence-panel security">
@@ -53,13 +58,6 @@
             <div class="project-info"><span class="project-number">02 / TIME SERIES · TEAM PROJECT</span><h3 id="traffic-title">Traffic prediction &amp; route guidance</h3><p>Connects traffic-flow forecasting to route planning: predict sensor flow, estimate travel time, and use A* search to recommend three routes across an 18-node network.</p><div class="tags"><span>Python</span><span>XGBoost</span><span>Random Forest</span><span>LSTM / GRU</span><span>A* search</span></div><div class="project-links"><a class="project-cta" href="https://github.com/RockyMoeHein/COS30019Assignment2b" target="_blank" rel="noopener noreferrer">Explore the code ↗</a><a class="project-cta" href="https://github.com/RockyMoeHein/COS30019Assignment2b/tree/main/notebooks" target="_blank" rel="noopener noreferrer">Read the notebooks ↗</a></div></div>
           </div>
           <details class="case-details"><summary>Data, evaluation &amp; limitations <span aria-hidden="true">+</span></summary><div class="case-grid"><div><h4>The data</h4><p>Directional SCATS readings from October 2006, reshaped into 15-minute observations with time, sensor, lag, and rolling-flow features.</p></div><div><h4>The evaluation</h4><p>Training uses dates before October 25; testing uses the remaining period. Published MAE favors XGBoost among these runs. Sequence models use fewer test observations, so the evaluated samples differ.</p></div><div><h4>The application</h4><p>A React interface lets users select endpoints, a date, a time, and a model, then inspect three recommended routes and edge-level costs.</p></div><div><h4>The limitations</h4><p>Historical data, approximate straight-line edge distances, and an assumed flow-to-speed relationship limit how these results translate to live road conditions.</p></div></div></details>
-        </article>
-        <article class="case-study" aria-labelledby="weather-title">
-          <div class="project">
-            <div class="evidence-panel weather"><span class="panel-label">FORECASTING WORKFLOW</span><h4>Tomorrow’s temperature.<br>Yesterday’s data.</h4><ol class="pipeline"><li><span>01</span><div><strong>Station observations</strong><small>Temperature, precipitation, and snow</small></div></li><li><span>02</span><div><strong>Ridge regression</strong><small>Baseline and rolling-feature experiments</small></div></li><li><span>03</span><div><strong>Rolling backtest</strong><small>Expanding training window · 90-row test blocks</small></div></li></ol><p class="panel-caption">Notebook workflow · next-day maximum temperature</p></div>
-            <div class="project-info"><span class="project-number">03 / PREDICTIVE MODELING</span><h3 id="weather-title">Weather forecasting</h3><p>Explores next-day maximum-temperature prediction with NOAA’s JFK Airport station data, using a Ridge regression baseline and additional rolling and calendar features.</p><div class="tags"><span>Python</span><span>pandas</span><span>scikit-learn</span><span>Ridge regression</span><span>Jupyter</span></div><a class="project-cta" href="https://github.com/khantthuaung/weatherforecast/blob/main/predict.ipynb" target="_blank" rel="noopener noreferrer">Explore the notebook ↗</a></div>
-          </div>
-          <details class="case-details"><summary>Approach &amp; evaluation <span aria-hidden="true">+</span></summary><div class="case-grid"><div><h4>The question</h4><p>How well can historical observations at one weather station predict the following day’s maximum temperature?</p></div><div><h4>The method</h4><p>The target is the next row’s maximum temperature. Ridge regression starts with precipitation, snow, snow depth, and daily temperature features.</p></div><div><h4>The experiment</h4><p>The notebook adds rolling and calendar-based features and compares absolute prediction errors through expanding-window backtests.</p></div><div><h4>The scope</h4><p>A single-station experiment. Backtest performance does not establish accuracy at other locations or under different weather conditions.</p></div></div></details>
         </article>
       </section>
       <section class="other-work" aria-labelledby="other-title"><div class="section-heading"><h2 id="other-title">Other projects<span class="sup">(02)</span></h2><span class="small-label">WEB &amp; PROGRAMMING</span></div><div class="other-grid"><a href="https://github.com/khantthuaung/fitnessgym" target="_blank" rel="noopener noreferrer"><span class="small-label">WEB DEVELOPMENT</span><h3>Fitness gym <span aria-hidden="true">↗</span></h3><p>A university web project exploring a fitness website.</p></a><a href="https://github.com/khantthuaung/tic-tac-toe" target="_blank" rel="noopener noreferrer"><span class="small-label">PYTHON</span><h3>Tic-tac-toe <span aria-hidden="true">↗</span></h3><p>A Python implementation of noughts and crosses.</p></a></div></section>
