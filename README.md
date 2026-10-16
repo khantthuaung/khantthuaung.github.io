@@ -18,4 +18,8 @@ After changing `styles.css` or `script.js`, update its `?v=` value in `index.htm
 
 ## Themes
 
-CSS custom properties define editorial dark mode and muted mint light mode. The initial theme follows the system preference; the header toggle saves an explicit choice in browser storage. The small head script applies the theme before rendering to avoid a flash of the wrong palette.
+CSS custom properties define graphite dark mode and warm paper light mode. The initial theme follows the system preference; the header toggle saves an explicit choice in browser storage. The small head script applies the theme before rendering to avoid a flash of the wrong palette.
+
+## Journey
+
+The `#journey` section contains a reverse-chronological education and experience timeline using native expandable details. Career dates are user-supplied; the internship employer and specific responsibilities have not yet been provided. Keep these entries factual when updating them.

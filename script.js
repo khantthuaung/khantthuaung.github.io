@@ -14,7 +14,7 @@ if (!["light", "dark"].includes(selectedTheme)) selectedTheme = null;
 function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
   document.querySelector('meta[name="theme-color"]').content =
-    theme === "dark" ? "#141412" : "#F0F2ED";
+    theme === "dark" ? "#15171B" : "#F3F1EB";
   themeToggle.setAttribute("aria-checked", String(theme === "dark"));
   themeToggle.title = `Switch to ${theme === "dark" ? "light" : "dark"} mode`;
 }
@@ -35,7 +35,7 @@ systemTheme.addEventListener("change", (event) => {
 // The mobile menu is a disclosure; desktop links are always visible.
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#main-navigation");
-const mobileLayout = window.matchMedia("(max-width: 700px)");
+const mobileLayout = window.matchMedia("(max-width: 800px)");
 function setMenuOpen(open) {
   menuToggle.setAttribute("aria-expanded", String(open));
   menuToggle.setAttribute(
@@ -65,3 +65,24 @@ document.addEventListener("keydown", (event) => {
 });
 mobileLayout.addEventListener("change", syncNavigation);
 syncNavigation();
+
+// Reflect the section currently being read in the navigation.
+const sectionLinks = [...navigation.querySelectorAll('a[href^="#"]')];
+const sectionObserver = new IntersectionObserver(
+  (entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+    if (!visible) return;
+    sectionLinks.forEach((link) => {
+      if (link.hash === `#${visible.target.id}`)
+        link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+  },
+  { rootMargin: "-10% 0px -45% 0px" },
+);
+sectionLinks.forEach((link) => {
+  const section = document.querySelector(link.hash);
+  if (section) sectionObserver.observe(section);
+});
